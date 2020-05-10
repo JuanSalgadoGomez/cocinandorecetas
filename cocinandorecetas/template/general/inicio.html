@@ -1,0 +1,9 @@
+{% extends "layout/main.html" %}
+
+{% block title %} Bienvenido a Cocinando Recetas {% endblock %}
+
+{% block content %}
+<h1>Excelente, primera vista con herencia</h1>
+<h2>Fecha actual: {{fecha_actual.day}}/{{fecha_actual.month}}/{{fecha_actual.year}}</h2>
+<h2>Hora: {{fecha_actual.hour}}:{{fecha_actual.minute}}:{{fecha_actual.second}} hrs.</h2>
+{% endblock %}

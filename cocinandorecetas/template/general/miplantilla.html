@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+<body>
+{% include "layout/barra.html" %}
+<div class="container-fluid">
+    <h1 class="prueba">
+        Wena cauros
+    </h1>
+
+    <h2>{{nombre_persona}} {{apellido_persona}} ha subido el proyecto a Heroku
+        {{ahora.day}}/{{ahora.month}}/{{ahora.year}}</h2>
+
+    {% if nombre_persona == 'Juan' %}
+    <h2>Probando variable con if: {{nombre_persona}} {{apellido_persona}}</h2>
+    {% endif %}
+
+    {% if equipo %}
+    <p>Listando miembros del equipo con bucle for</p>
+    <h2>Miembros del equipo: </h2>
+    <ul>
+        {% for miembro in equipo %}
+        <li>{{miembro}}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h2>No hay miembros actualmente</h2>
+    {% endif %}
+
+    {# Esto es un comentario de una sola linea #}
+
+    {% comment %}
+
+    Esto es un comentario
+    con mas de una line
+
+    {% endcomment %}
+</div>
+
+</body>
+</html>
